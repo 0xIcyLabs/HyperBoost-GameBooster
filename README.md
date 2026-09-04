@@ -5,7 +5,7 @@
 
 ![badge-win](https://img.shields.io/badge/Windows-10%20/%2011-00e8b3) ![badge-lang](https://img.shields.io/badge/Languages-6-00e8b3) ![badge-free](https://img.shields.io/badge/Free-✓-00e8b3) ![badge-src](https://img.shields.io/badge/Source-open-00e8b3)
 
-**Publisher:** 0xIcyLabs · **License:** MIT · **Version:** 1.5.0
+**Publisher:** 0xIcyLabs · **License:** MIT · **Version:** 1.5.1
 
 ---
 
@@ -26,7 +26,7 @@
 | 🧹 | **JUNK CLEANUP** | Windows Temp, user temp, Windows Update cache. |
 | 🎮 | **GAME AGENT** | Auto-boost when a game starts, auto-revert when you leave. Hotkey **Ctrl + Alt + B**, tray icon. |
 | 🛡️ | **RECOVERY** | One-click restore after a crash or force-kill. |
-| 🧩 | **7 GAMING TWEAKS** | Game Mode, Game DVR, GPU scheduling (HAGS), network QoS, foreground priority, PCIe/USB/CPU power — all reversible. |
+| 🧩 | **6 GAMING TWEAKS** | Game Mode, Game DVR, network QoS, foreground priority, PCIe/USB/CPU power — all reversible. |
 | 🌍 | **6 languages** | Switchable anytime from the top-right menu. |
 
 ➡️ Full details and step-by-step instructions: **[USAGE.md](USAGE.md)**
@@ -35,7 +35,7 @@
 
 ## 🚀 Quick start
 
-1. **Download** [`HyperBoost v1.5.0.exe`](releases/latest).
+1. **Download** [`HyperBoost v1.5.1.exe`](releases/latest).
 2. **Run it** — accept the UAC prompt (administrator rights are required).
 3. **No installation needed** — runs portable. Data lives in `%LOCALAPPDATA%\HyperBoost`.
 
@@ -88,7 +88,7 @@ HyperBoost/
 One command, no dependencies beyond the .NET Framework compiler:
 
 ```powershell
-csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.0.exe" `
+csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.1.exe" `
   /win32manifest:app.manifest /win32icon:HyperBoost.ico `
   /r:System.dll /r:System.Core.dll /r:System.Data.dll `
   /r:System.Drawing.dll /r:System.Windows.Forms.dll `
@@ -99,10 +99,10 @@ Full walkthrough: **[BUILDING.md](BUILDING.md)**
 
 ## 📝 Release notes
 
-**v1.5.0**
+**v1.5.1**
 - Added the **Game Agent** (auto-boost / auto-revert, tray, `Ctrl+Alt+B`).
 - Added **RECOVERY** (self-healing after crash / force-kill) and persisted undo journal.
-- Added **session reports** and the **7th tweak** (QoS packet priority).
+- Added **session reports** and the **6th tweak** (QoS packet priority).
 - Publisher: **0xIcyLabs** — shown in the app footer.
 
 **v1.4.0**
