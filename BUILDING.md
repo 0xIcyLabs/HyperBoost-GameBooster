@@ -73,7 +73,7 @@ Expected output: `== ALL TESTS PASSED ==` (68 localization keys checked).
 1. Build the exe.
 2. Compute the SHA-256 for your release notes:
    ```powershell
-   Get-FileHash "HyperBoost v1.5.0.exe" -Algorithm SHA256
+   Get-FileHash "HyperBoost v1.5.1.exe" -Algorithm SHA256
    ```
 3. Attach the exe (and the hash) to a GitHub **Release** — never commit binaries to the repo.
 
