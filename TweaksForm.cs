@@ -98,7 +98,7 @@ namespace HyperBoost
                 Font = new Font("Segoe UI Semibold", 11F), Text = Texts.T(language, "tweaksForm")
             };
 
-            string[] keys = { "tw0", "tw1", "tw2", "tw3", "tw4", "tw5", "tw6" };
+            string[] keys = { "tw0", "tw1", "tw3", "tw4", "tw5", "tw6" };
             rows = new TweaksRow[keys.Length];
             int top = 62;
             for (int i = 0; i < keys.Length; i++)
