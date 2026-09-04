@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -46,7 +46,7 @@ namespace HyperBoost
         private GpuBoost gpuState = GpuBoost.None;
         private RamMonitor ramMonitor;
         private readonly Label boostNotice = new Label { AutoSize = false, AutoEllipsis = true, Height = 20, Top = 131, TextAlign = ContentAlignment.MiddleCenter, Visible = false, BackColor = Color.FromArgb(5,11,17), ForeColor = Color.FromArgb(255,180,81), Font = new Font("Consolas", 8F, FontStyle.Bold) };
-        private bool cleaningUp;
+        private bool cleaningUp; private bool exitConfirmed;
 
         internal MainForm()
         {
@@ -106,7 +106,7 @@ namespace HyperBoost
             SetupGrid();
             var footerPanel = new Panel { Dock = DockStyle.Bottom, Height = 36, BackColor = Ui.Panel };
             footer.Dock = DockStyle.Fill; footer.BackColor = Ui.Panel; footer.ForeColor = Ui.TextMuted; footer.TextAlign = ContentAlignment.MiddleLeft;
-            var versionLabel = new Label { Dock = DockStyle.Right, AutoSize = false, Width = 260, TextAlign = ContentAlignment.MiddleLeft, Padding = new Padding(0,9,20,0), BackColor = Ui.Panel, ForeColor = Ui.TextMuted, Font = Ui.Mono(8.5f), Text = "HyperBoost v1.5.0 • 0xIcyLabs" };
+            var versionLabel = new Label { Dock = DockStyle.Right, AutoSize = false, Width = 260, TextAlign = ContentAlignment.MiddleLeft, Padding = new Padding(0,9,20,0), BackColor = Ui.Panel, ForeColor = Ui.TextMuted, Font = Ui.Mono(8.5f), Text = "HyperBoost v1.5.1 • 0xIcyLabs" };
             footerPanel.Controls.Add(footer); footerPanel.Controls.Add(versionLabel);
             Controls.Add(grid); Controls.Add(footerPanel); Controls.Add(optStrip); Controls.Add(appBar);
 
@@ -463,7 +463,7 @@ namespace HyperBoost
                 int prevRes; bool started = Boost.StartTimerResolution(out prevRes);
                 timerBoosted = started; prevTimerResolution = prevRes;
                 boostButton.SetProgress(0.7, Texts.T(language, "tweaksPhase"));
-                await Task.Run(delegate { for (int i = 0; i < 7; i++) if (!GameTweaks.Effective(i)) { try { GameTweaks.Apply(i); } catch { } } });
+                await Task.Run(delegate { for (int i = 0; i < 6; i++) if (!GameTweaks.Effective(i)) { try { GameTweaks.Apply(i); } catch { } } });
                 boostButton.SetProgress(0.85, Texts.T(language, "monitorPhase"));
                 if (ramMonitor == null) ramMonitor = new RamMonitor(m =>
                 {
@@ -539,6 +539,14 @@ namespace HyperBoost
                     cleaningUp = false;
                     if (!IsDisposed) Close();
                 }));
+                return;
+            }
+if (e.CloseReason == CloseReason.UserClosing && !cleaningUp && !exitConfirmed &&
+                (prevScheme != Guid.Empty || timerBoosted || ramMonitor != null))
+            {
+                e.Cancel = true;
+                var choice = MessageBox.Show(this, Texts.T(language, "exitWarn"), Texts.T(language, "exitWarnTitle"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (choice == DialogResult.Yes) { exitConfirmed = true; Close(); }
                 return;
             }
             RestoreBoostSync();
