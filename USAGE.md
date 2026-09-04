@@ -9,7 +9,7 @@ Everything you need to run HyperBoost. Build it yourself? See [BUILDING.md](BUIL
 
 ## Getting started
 
-1. Download `HyperBoost v1.5.0.exe` from the [Releases](releases/latest) page.
+1. Download `HyperBoost v1.5.1.exe` from the [Releases](releases/latest) page.
 2. Run it — accept the **UAC prompt** (administrator rights are required).
 3. That's it. No installation — it runs portable. Your data (game list, settings, recovery state) lives in `%LOCALAPPDATA%\HyperBoost`.
 
