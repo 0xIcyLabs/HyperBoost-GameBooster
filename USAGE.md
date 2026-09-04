@@ -25,12 +25,12 @@ Everything you need to run HyperBoost. Build it yourself? See [BUILDING.md](BUIL
 |---|---|
 | 🛠 **Service control** | Grid of **57 services** commonly disabled for gaming — only ones installed on *your* PC are shown, running ones first. Start/stop per service or all at once. |
 | 🚀 **OPTIMIZATION** | One click: stops all configured services in parallel, flushes RAM, then reports exactly how much was freed. |
-| ⚡ **PERFORMANCE BOOST** | Anti-stutter pack in one pass (power plan + GPU + timer resolution + **all 7 gaming tweaks** + RAM monitor). |
+| ⚡ **PERFORMANCE BOOST** | Anti-stutter pack in one pass (power plan + GPU + timer resolution + **all 6 gaming tweaks** + RAM monitor). |
 | ↩️ **REVERT BOOST** | Reverts everything BOOST changed — runs automatically when the app closes. |
 | 🧹 **JUNK CLEANUP** | Windows Temp, user temp, Windows Update cache. |
 | 🎮 **GAME AGENT** | Auto-boosts when a game starts, auto-reverts when you leave. Hotkey **Ctrl + Alt + B**, tray icon, launch-at-startup. |
 | 🛡️ **RECOVERY** | If a boost was interrupted (crash / force-kill), next launch offers one-click restore. |
-| 🧩 **7 GAMING TWEAKS** | Game Mode, Game DVR off, GPU scheduling (HAGS), network QoS, foreground priority, PCIe/USB/CPU power. All saved and fully reversible. |
+| 🧩 **6 GAMING TWEAKS** | Game Mode, Game DVR off, network QoS, foreground priority, PCIe/USB/CPU power. All saved and fully reversible. |
 | 🌍 **6 languages** | English / 日本語 / 한국어 / 中文 / Français / العربية (RTL supported) — switch from the top-right menu anytime. |
 
 ---
@@ -55,7 +55,7 @@ Applies the full anti-stutter pack in one pass:
 2. **GPU persistence mode** (NVIDIA, where supported) — keeps the driver resident in memory.
 3. **Timer resolution** — requests high-resolution timers for smoother frame pacing.
 4. **RAM monitor** — keeps an eye on memory pressure while boosted.
-5. **All 7 gaming tweaks** — Game Mode, DVR off, HAGS, network QoS, foreground priority, PCIe/USB/CPU power (identical to the TWEAKS panel).
+5. **All  gaming tweaks** — Game Mode, DVR off, network QoS, foreground priority, PCIe/USB/CPU power (identical to the TWEAKS panel).
 
 ## ↩️ Reverting
 
@@ -75,7 +75,7 @@ Tick the locations you want, let it measure the sizes, then **CLEAN**. Locked/in
 
 ## 🧩 Tweaks
 
-All 7 tweaks are **saved before they change** and fully reversible — registry values and power settings alike. Apply, revert, or restore individual tweaks from the checklist.
+All  tweaks are **saved before they change** and fully reversible — registry values and power settings alike. Apply, revert, or restore individual tweaks from the checklist.
 
 ---
 
@@ -88,4 +88,4 @@ All 7 tweaks are **saved before they change** and fully reversible — registry 
 
 ---
 
-*HyperBoost v1.5.0 • 0xIcyLabs*
+*HyperBoost v1.5.1 • 0xIcyLabs*
