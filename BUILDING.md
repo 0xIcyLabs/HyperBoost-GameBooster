@@ -17,7 +17,7 @@ HyperBoost is a plain C# WinForms app compiled directly with the .NET Framework 
 From the repository root (use the Developer Command Prompt, or the full path to `csc.exe`):
 
 ```bat
-csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.0.exe" ^
+csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.1.exe" ^
   /win32manifest:app.manifest /win32icon:HyperBoost.ico ^
   /r:System.dll /r:System.Core.dll /r:System.Data.dll ^
   /r:System.Drawing.dll /r:System.Windows.Forms.dll ^
@@ -27,7 +27,7 @@ csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.0.exe" ^
 PowerShell variant:
 
 ```powershell
-csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.0.exe" `
+csc.exe /nologo /target:winexe /out:"HyperBoost v1.5.1.exe" `
   /win32manifest:app.manifest /win32icon:HyperBoost.ico `
   /r:System.dll /r:System.Core.dll /r:System.Data.dll `
   /r:System.Drawing.dll /r:System.Windows.Forms.dll `
@@ -53,7 +53,7 @@ powershell -ExecutionPolicy Bypass -File make-icon.ps1
 
 ## Verify your build
 
-1. Run the exe — it should request admin rights (UAC prompt) and show the footer **"HyperBoost v1.5.0 • 0xIcyLabs"**.
+1. Run the exe — it should request admin rights (UAC prompt) and show the footer **"HyperBoost v1.5.1 • 0xIcyLabs"**.
 2. Check file properties → **Details** tab: Product *HyperBoost*, Copyright *© 2026 0xIcyLabs*.
 
 ## Run the test harness (optional)
