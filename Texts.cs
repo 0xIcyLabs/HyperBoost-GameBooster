@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace HyperBoost
 {
@@ -44,6 +44,8 @@ namespace HyperBoost
             { "boostRestored", new[] { "RESTORED", "復元完了", "복원 완료", "已还原", "RESTAURÉ", "تمت الاستعادة" } },
             { "monitorFreedFmt", new[] { "RAM MONITOR: +{0} MB FREED", "RAM モニター: +{0} MB 解放", "RAM 모니터: +{0} MB 해방", "RAM 监控: 已释放 {0} MB", "SURVEILLANCE RAM : +{0} Mo LIBÉRÉS", "مراقبة الذاكرة: تم تحرير {0} م.ب" } },
             { "boostNotice", new[] { "BOOST IS FULLY REVERTED BY REVERT BOOST OR WHEN THE APP CLOSES", "ブーストは「ブースト解除」またはアプリ終了時に完全に解除されます", "부스트는 부스트 해제 또는 앱 종료 시 완전히 해제됩니다", "点击撤销加速或关闭应用时将完全撤销加速", "Le boost est entièrement annulé par ANNULER LE BOOST ou à la fermeture de l'application", "يتم التراجع عن التعزيز بالكامل عند الإلغاء أو إغلاق التطبيق" } },
+            { "exitWarnTitle", new[] { "BOOST ACTIVE", "ブースト有効", "부스트 활성", "加速已激活", "BOOST ACTIF", "التعزيز نشط" } },
+            { "exitWarn", new[] { "A performance boost is active.\n\nAll boosted settings will be reverted now. Exit anyway?", "ブーストが有効です。\n\n設定を元に戻してから終了します。終了しますか？", "부스트가 활성 상태입니다.\n\n모든 설정을 복원한 후 종료합니다. 종료하시겠습니까?", "加速已激活。\n\n将撤销所有加速设置后再退出。确定退出吗？", "Un boost est actif.\n\nTous les réglages seront annulés avant de quitter. Quitter quand même ?", "التعزيز نشط.\n\nستتم استعادة جميع الإعدادات الآن. هل تريد الخروج؟" } },
             { "junk", new[] { "JUNK CLEANUP", "ジャンク削除", "정크 정리", "垃圾清理", "NETTOYAGE DE FICHIERS", "تنظيف الملفات" } },
             { "junkForm", new[] { "JUNK CLEANUP", "ジャンク削除", "정크 정리", "垃圾清理", "NETTOYAGE DE FICHIERS", "تنظيف الملفات" } },
             { "tempWin", new[] { "Windows temp folder", "Windows 一時フォルダ", "Windows 임시 폴더", "Windows 临时文件夹", "Dossier temporaire Windows", "مجلد Windows المؤقت" } },
@@ -59,14 +61,12 @@ namespace HyperBoost
             { "tweaksForm", new[] { "GAMING TWEAKS", "ゲーム最適化設定", "게임 최적화 설정", "游戏优化调整", "AJUSTEMENTS JEU", "تحسينات الألعاب" } },
             { "applyTweaks", new[] { "APPLY", "適用", "적용", "应用", "APPLIQUER", "تطبيق" } },
             { "revertTweaks", new[] { "REVERT ALL", "すべて解除", "모두 해제", "全部撤销", "TOUT ANNULER", "إلغاء الكل" } },
-            { "tweaksNote", new[] { "Fully reverted by REVERT BOOST or when the app closes. HAGS needs a reboot to take effect.", "REVERT BOOST またはアプリ終了時に完全に解除されます。HAGS は再起動後に有効になります。", "REVERT BOOST 또는 앱 종료 시 완전히 해제됩니다. HAGS는 재부팅 후 적용됩니다.", "点击撤销加速或关闭应用时完全撤销。HAGS 需重启后生效。", "Entièrement annulé par REVERT BOOST ou à la fermeture. HAGS nécessite un redémarrage.", "يتم التراجع بالكامل عبر REVERT BOOST أو عند الإغلاق. يتطلب HAGS إعادة تشغيل." } },
-            { "tweaksApplied", new[] { "APPLIED - HAGS takes effect after a reboot.", "適用完了 - HAGS は再起動後に有効になります。", "적용 완료 - HAGS는 재부팅 후 적용됩니다.", "已应用 - HAGS 重启后生效。", "APPLIQUÉ - HAGS actif après redémarrage.", "تم التطبيق - يعمل HAGS بعد إعادة التشغيل." } },
+            { "tweaksNote", new[] { "Fully reverted by REVERT BOOST or when the app closes.", "REVERT BOOST またはアプリ終了時に完全に解除されます。", "REVERT BOOST 또는 앱 종료 시 완전히 해제됩니다.", "点击撤销加速或关闭应用时完全撤销。", "Entièrement annulé par REVERT BOOST ou à la fermeture.", "يتم التراجع بالكامل عبر REVERT BOOST أو عند الإغلاق." } },
+            { "tweaksApplied", new[] { "APPLIED", "適用完了", "적용 완료", "已应用", "APPLIQUÉ", "تم التطبيق" } },
             { "tw0", new[] { "Game Mode", "ゲームモード", "게임 모드", "游戏模式", "Mode Jeu", "وضع اللعبة" } },
             { "tw0d", new[] { "Gives the running game CPU and I/O priority", "ゲームにCPUとI/Oの優先度を与えます", "실행 중인 게임에 CPU·I/O 우선권을 부여합니다", "为游戏提供 CPU 和 I/O 优先级", "Donne la priorité CPU/ES au jeu en cours", "منح اللعبة أولوية المعالج والإدخال/الإخراج" } },
             { "tw1", new[] { "Disable Game DVR recording", "ゲーム録画を無効化", "게임 DVR 비활성화", "关闭游戏录制", "Désactiver Game DVR", "تعطيل تسجيل الألعاب" } },
             { "tw1d", new[] { "Stops Xbox background capture that silently costs FPS", "バックグラウンド録画を停止しFPSを守ります", "백그라운드 녹화를 꺼 FPS 손실을 막습니다", "关闭占用帧率的后台录制", "Stoppe la capture en arrière-plan qui coûte des FPS", "إيقاف التسجيل الخلفي الذي يستهلك الأداء" } },
-            { "tw2", new[] { "GPU scheduling — HAGS", "GPU スケジューリング (HAGS)", "GPU 스케줄링 - HAGS", "GPU 硬件加速调度", "Planification GPU - HAGS", "جدولة GPU - HAGS" } },
-            { "tw2d", new[] { "Reduces GPU scheduling latency — reboot required", "GPUスケジューリング遅延を低減(要再起動)", "GPU 스케줄링 지연 감소(재부팅 필요)", "降低 GPU 调度延迟(需重启)", "Réduit la latence GPU (redémarrage requis)", "تقليل زمن جدولة GPU (يتطلب إعادة تشغيل)" } },
             { "tw3", new[] { "Low-latency network", "低レイテンシネットワーク", "저지연 네트워크", "低延迟网络", "Réseau faible latence", "شبكة منخفضة الكمون" } },
             { "tw3d", new[] { "Removes packet throttling for steadier ping", "パケット抑制を解除しpingを安定させます", "패킷 제한을 해제해 핑을 안정화합니다", "取消数据包限流，稳定延迟", "Supprime la limitation réseau pour un ping stable", "إزالة تقييد الحزم لثبات الاستجابة" } },
             { "tw4", new[] { "Foreground app priority", "前面ウィンドウ優先", "포그라운드 우선", "前台优先", "Priorité premier plan", "أولوية التطبيقات الأمامية" } },
@@ -75,7 +75,7 @@ namespace HyperBoost
             { "tw5d", new[] { "PCIe ASPM and USB suspend off, aggressive CPU boost", "PCIe/USB省電力を無効化しCPUブーストを強化", "PCIe·USB 절전을 끄고 CPU 부스트를 공격적으로", "关闭 PCIe/USB 节电，CPU 加速激进", "ASPM et USB suspend off, boost CPU agressif", "تعطيل توفير طاقة PCIe/USB وتعزيز CPU" } },
 { "tw6", new[] { "Game packet priority (QoS)", "ゲームパケット優先 (QoS)", "게임 패킷 우선 (QoS)", "游戏数据包优先 (QoS)", "Priorité paquets jeu (QoS)", "أولوية حزم اللعبة (QoS)" } },
 { "tw6d", new[] { "Tags game traffic as priority (DSCP 46) so routers and Windows keep ping steady under load", "ゲーム通信を優先(DSCP 46)し、負荷時もpingを安定させます", "게임 트래픽을 우선(DSCP 46) 처리해 부하 중에도 핑을 안정화합니다", "将游戏流量标记为优先(DSCP 46)，高负载下延迟更稳", "Marque le trafic du jeu prioritaire (DSCP 46) pour un ping stable en charge", "يوسم حركة مرور اللعبة كأولوية (DSCP 46) لثبات الاستجابة تحت الحمل" } },
-            { "countFmt", new[] { "APPLIED  {0} / 7", "{0} / 7 適用済み", "{0} / 7 적용됨", "已应用 {0} / 7", "{0} / 7 APPLIQUÉS", "تم تطبيق {0} / 7" } },
+            { "countFmt", new[] { "APPLIED  {0} / 6", "{0} / 6 適用済み", "{0} / 6 적용됨", "已应用 {0} / 6", "{0} / 6 APPLIQUÉS", "تم تطبيق {0} / 6" } },
             { "appliedRow", new[] { "APPLIED", "適用済み", "적용됨", "已应用", "APPLIQUÉ", "مطبق" } },
             { "onRow", new[] { "ON", "オン", "켜짐", "开", "ACTIF", "مفعل" } },
             { "offRow", new[] { "OFF", "オフ", "꺼짐", "关", "INACTIF", "معطل" } },
